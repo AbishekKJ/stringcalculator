@@ -16,12 +16,8 @@ Use the Below Steps to install the requirements
 		cd Scripts
 		activate
 
-3. Install the required modules from requirements.txt
-		
-		pip install -r requirements.txt
 
-4. To run the CLI tool
-		python service_monitoring.py <command>
+3. To run the string calculator tool
+		python stringcalculator.py
 
-		For help on the commands, please enter python service_monitoring.py --help
 ```
