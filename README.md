@@ -52,3 +52,22 @@ pip install -e /path/to/script/folder
 
 After that you can run myscript from any directory.
 ```
+
+## To execute the string calculator
+
+python stringcalculator
+
+It asks for the string input 
+
+![image](https://user-images.githubusercontent.com/40816819/224110365-841225ad-a813-4875-a223-6cac7fb2f2a8.png)
+
+
+## Unittest and Coverage Report:
+
+![image](https://user-images.githubusercontent.com/40816819/224109052-87df2eed-2138-4211-9278-0a5d4186105f.png)
+
+## Improvements:
+
+1. Docker can be used to make the program suitable for all the run time
+2. Regex can be used to parse the strings more effectively. Not used to avoid it as a quick hack
+3. If needed as installable then we can use pyinstaller to create executable files
