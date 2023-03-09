@@ -1,5 +1,5 @@
 class NegativeNumbersException(Exception):
-    def __init__(self):
+    def __init__(self, negative_numbers):
         self.message = f"negatives not allowed- {','.join(negative_numbers)}"
         super().__init__(self.message)
 
