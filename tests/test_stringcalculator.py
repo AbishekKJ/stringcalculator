@@ -15,6 +15,10 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(TestStringCalculator.calculator.Add("1"), 1)
         self.assertEqual(TestStringCalculator.calculator.Add("1,2"), 3)
 
+    def test_Add_with_positive_numbers_with_value_greater_than_1000(self):
+        self.assertEqual(TestStringCalculator.calculator.Add("1"), 1)
+        self.assertEqual(TestStringCalculator.calculator.Add("1,1007"), 1)
+
     def test_Add_with_positive_numbers_with_comma_at_end(self):
         self.assertEqual(TestStringCalculator.calculator.Add("1,"), 1)
         self.assertEqual(TestStringCalculator.calculator.Add("1,2,"), 3)
@@ -30,6 +34,9 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_Add_with_custom_delimiter_multiple(self):
         self.assertEqual(TestStringCalculator.calculator.Add("// [*][ %]\n1 * 2 % 3"), 6)
+
+    def test_Add_with_custom_delimiter_multiple_variable_length(self):
+        self.assertEqual(TestStringCalculator.calculator.Add("// [**][%%%]\n1 ** 2 %%% 3"), 6)
 
     def test_Add_with_custom_delimiter_multiple_and_new_line_inbetween(self):
         self.assertEqual(TestStringCalculator.calculator.Add("// [*][ %]\n1 * 2 % \n3"), 6)
