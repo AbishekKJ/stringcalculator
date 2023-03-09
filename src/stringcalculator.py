@@ -18,14 +18,18 @@ class StringCalculator:
             parsed_numbers = StringCalculator.parseStringToNumbers(numbers)
             StringCalculator.checkNegativeNumbers(parsed_numbers)
             return sum([number for number in parsed_numbers if number <= 1000])
-        except TypeError:
+        except ValueError as e:
             print("Error in changing string to integer", traceback.format_exc())
+            raise e
+        except TypeError as e:
+            print("Error in changing string to integer", traceback.format_exc())
+            raise e
 
     @classmethod
     def checkNegativeNumbers(cls, numbers):
         negative_numbers = [number for number in numbers if number < 0]
         if len(negative_numbers) > 0:
-            raise NegativeNumbersException(negative_numbers)
+            raise NegativeNumbersException([str(i) for i in negative_numbers])
 
     @classmethod
     def parseStringToNumbers(cls, numbers: str) -> List:
