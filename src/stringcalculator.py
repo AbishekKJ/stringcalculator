@@ -142,6 +142,14 @@ class StringCalculator:
         return numbers.endswith('\n')
 
 
+def main():
+    input_string = input("Enter the input string")
+    if '\\n' in input_string:  # Escape the new line
+        input_string = input_string.replace('\\n', '\n')
+    print(StringCalculator.Add(input_string))
+
+
 if __name__ =="__main__":
-    print(StringCalculator.Add('1\n2,3'))
+    # print(StringCalculator.Add('1\n2,3'))
+    main()
 
